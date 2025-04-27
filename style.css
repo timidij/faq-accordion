@@ -60,6 +60,7 @@ body{
     display: flex;
     position: inherit;
     margin-bottom: 20px;
+   
 }
 .question:hover{
     cursor: pointer;
@@ -74,18 +75,19 @@ body{
 .mystyle{
     display: block;
 }
+
 .minus{
     display: none;
 }
 .minus:hover{
     border-radius: 50px;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 .showminus{
     display: block;
 }
 h3{
-    margin-right: auto;
+    margin-right: 6px;
 }
 
 
