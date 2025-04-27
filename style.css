@@ -4,6 +4,10 @@
     --Grayishpurple: hsl(292, 16%, 49%);
     --Darkpurple: hsl(292, 42%, 14%);
 }
+@font-face {
+    font-family: "Work Sans";
+    src: url(./assets/fonts/WorkSans-VariableFont_wght.ttf);
+}
 *{
     margin: 0px;
     padding: 0px;
@@ -13,53 +17,59 @@
 body{
 
     background-color: var(--Lightpink);
+    /* height: 100vw; */
+    font-family: "Work Sans";
+    color: var(--Darkpurple);
 
 }
 .main{
-
-
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
-    /* position: absolute; */
     justify-content: center;
     align-items: center;
 
 }
 
 .crew{
-    background-color: blue;
-    height:500px;
+    height:200px;
     display: flex;
-    position: absolute;
     background-image: url(./assets/images/background-pattern-desktop.svg);
+    position: absolute;
+    background-size: cover;
     top: 0px;
     width: 100%;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 20px;
 }
 
 .faq{
     background-color: var(--White);
     display: flex;
-    /* position: absolute; */
     flex-direction: column;
+    justify-content: space-between;
     z-index: 5;
-    height: 500px;
-    margin-top: 400px;
+    margin: auto;
+    margin-top: 100px;
     width: 50%;
+    min-height: 550px;
     border-radius: 30px;
-    padding: 20px;
+    padding: 30px;
 
 }
 .heading{
     display: flex;
     position: inherit;
+    margin-bottom: 40px;
+}
+.heading > img{
+    margin-right: 10px;
 }
 .question{
     display: flex;
     position: inherit;
     margin-bottom: 20px;
+    justify-content: space-between;
    
 }
 .question:hover{
@@ -70,6 +80,7 @@ body{
 .answer{
     display: none;
     margin-bottom: 20px;
+    color: var(--Grayishpurple);
 }
 
 .mystyle{
@@ -90,4 +101,28 @@ h3{
     margin-right: 6px;
 }
 
-
+.attribution{
+    display: flex;
+    position: fixed;
+    bottom: 0px;
+    z-index: 6;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    /* margin-top: 40px; */
+}
+@media (max-width:600px){
+    
+    .crew{
+        background-image: url(./assets/images/background-pattern-mobile.svg);
+        background-repeat: none;
+        background-size: contain;
+        height: 50%;
+    }
+    .faq{
+        margin-top: 50%;
+        width: 900%;
+        display: flex;
+        
+    }
+}
